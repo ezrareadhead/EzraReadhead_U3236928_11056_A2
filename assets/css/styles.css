@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.Header_Container{
+    box-sizing: border-box;
+    display: block;
+    position: sticky;
+}
+
+.Header{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-height: 56px;
+}
+
+h1.Logo a{
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    color: #020201;
+    font-size: xx-large;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: block;
+    padding: 4px 4px 4px 4px;
+}
+
+.Nav{
+    box-sizing: border-box;
+    display: block;
+}
+
+.Nav_List{
+    box-sizing: border-box;
+    display: flex;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+.Nav_Item{
+    box-sizing: border-box;
+    display: list-item;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    text-align: left;
+}
+
+.Nav_Button{
+    box-sizing: border-box;
+    align-items: flex-start;
+    appearance: none;
+    display: block;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    text-align: center;
+    letter-spacing: .2px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.Nav_Button:hover{
+    color: #EE444D;
+    letter-spacing: 0.7;
+}
+
+.Hero_Container{
+    overflow: hidden;
+    justify-content: center;
+    box-sizing: border-box;
+    display: block;
+    align-items: center;
+
+    /* position: absolute; */
+}
+
+.Hero_Img{
+    /* add and format hero image */
+    background-image: url(https://c1.staticflickr.com/3/2807/33082481922_832ba46a3d_b.jpg);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    width: 100vw;
+    height: 65vh;
+
+    /* format content */
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+    /* text styling */
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.Hero_Subheading{
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.Book_Button{
+    /* button styling */
+    padding-bottom: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 10px;
+    border: none;
+    border-radius: 30px;;
+    background-image: linear-gradient(to right, #EE444D , #F39063, #F7DC78);
+
+
+    /* text styling */
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .5px;
+    font-family: 'Jost', sans-serif;
+    font-weight: regular;
+    font-size: 16px;
+    color: #ffffff;
+
+    /* formatting & other */
+    cursor: pointer;
+    margin: 5% auto;
+    display: inline-block;
+	margin: 30px;
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.Book_Button:hover{
+    -webkit-transform: scale(0.8);
+    transform: scale(1.1);
+}
