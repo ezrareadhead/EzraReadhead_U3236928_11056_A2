@@ -1,163 +1,370 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
     margin: 0;
-    -webkit-font-smoothing: antialiased;
+    padding: 0;
+    box-sizing: border-box;
+    color: #111114;
 }
 
-.Header_Container{
-    box-sizing: border-box;
-    display: block;
-    position: sticky;
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: #FFFFFC;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
-.Header{
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    justify-content: space-between;
-    padding-bottom: 12px;
-    padding-top: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    min-height: 56px;
-}
-
-h1.Logo a{
-    font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    color: #020201;
-    font-size: xx-large;
-    box-sizing: border-box;
+a{
     text-decoration: none;
-    display: block;
-    padding: 4px 4px 4px 4px;
+    color: inherit;
 }
 
-.Nav{
-    box-sizing: border-box;
-    display: block;
+li{
+    list-style: none;
 }
 
-.Nav_List{
-    box-sizing: border-box;
-    display: flex;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-}
-
-.Nav_Item{
-    box-sizing: border-box;
-    display: list-item;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    text-align: left;
-}
-
-.Nav_Button{
-    box-sizing: border-box;
-    align-items: flex-start;
-    appearance: none;
-    display: block;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    text-align: center;
-    letter-spacing: .2px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
-.Nav_Button:hover{
-    color: #EE444D;
-    letter-spacing: 0.7;
-}
-
-.Hero_Container{
-    overflow: hidden;
-    justify-content: center;
-    box-sizing: border-box;
-    display: block;
+.navContainer{
+    /* positioning */
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
-
-    /* position: absolute; */
+    padding: 1em;
+    text-align: center;
+    /* styling */
+    color: #FFFFFC;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.Hero_Img{
-    /* add and format hero image */
-    background-image: url(https://c1.staticflickr.com/3/2807/33082481922_832ba46a3d_b.jpg);
+.navLinks{
+    /* positioning */
+    position: relative;
+    margin: 0 1em 0 1em;
+    float: left;
+    /* styling */
+    letter-spacing: 0.15em;
+}
+
+.Logo{
+    position: relative;
+    color: #EE444D;
+    font-size: 2.5em;
+}
+
+.navItem{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    align-items: right;
+}
+
+/* .navLinks{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    position: relative;
+    grid-column: 2/3;
+    text-align: right;
+    float: left;
+  } */
+  
+.navLinks:hover {
+    color: #111114;
+}
+
+.navLinks::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #111114;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+.navLinks:hover::before {
+transform: scaleX(1);
+}
+
+.heroContainer, .whyCanberra{
+     /* add and format hero image */
+     position: relative;
+     /* overflow: hidden; */
+     background-position-x: 50%;
+     background-position-y: 50%;
+     background-size: cover;
+     width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+
+.heroContainer .one{
+    position: relative;
+    text-align: center;
+    display: -moz-grid-line;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    bottom: 0;
+}
+
+h1{
+    position: absolute;
+    bottom: 0;
+    color: #111114;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'League Gothic', sans-serif;
+    width: 100%;
+}
+
+.heroContainer .two{
+    display:grid;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    /* background-image: url(https://rosetta.slv.vic.gov.au/delivery/DeliveryManagerServlet?dps_func=stream&dps_pid=FL21843384); */
+    /* overflow: hidden; */
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: cover;
-    width: 100vw;
-    height: 65vh;
-
-    /* format content */
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-
-    /* text styling */
-    font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
+    -webkit-filter: grayscale();
 }
 
-.Hero_Subheading{
-    -webkit-text-stroke-color: #ffffff;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+.two img{
+    display: inline;
+    width: 100%;
+    
 }
 
-.Book_Button{
-    /* button styling */
-    padding-bottom: 10px;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 10px;
-    border: none;
-    border-radius: 30px;;
-    background-image: linear-gradient(to right, #EE444D , #F39063, #F7DC78);
+.heroContainer .three{
+    position: absolute;
+    bottom: 0;
+    display:grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background-color: rgba(255, 255, 255, 0.505); */
+    font-size: 1em;
+    height: 20vh;
+    font-weight: light;
+}
 
-
-    /* text styling */
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: .5px;
-    font-family: 'Jost', sans-serif;
-    font-weight: regular;
-    font-size: 16px;
-    color: #ffffff;
-
-    /* formatting & other */
-    cursor: pointer;
-    margin: 5% auto;
-    display: inline-block;
-	margin: 30px;
+.heroContainer .four{
     position: relative;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    text-align: center;
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    height: 30vh;
 }
 
-.Book_Button:hover{
-    -webkit-transform: scale(0.8);
-    transform: scale(1.1);
+#arrow{
+    position: absolute;
+bottom: 0px;
+right: 0px;
+}
+
+/* .heroContainer h1{
+    position: absolute;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 18vw;
+} */
+
+.heroContainer .five{
+    background-image: url(https://rosetta.slv.vic.gov.au/delivery/DeliveryManagerServlet?dps_func=stream&dps_pid=FL21843396) ;
+    display: grid;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    width: 18vw;
+    height: auto;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    -webkit-filter: grayscale();
+}
+
+.five img{
+    
+}
+
+
+/* FOOTER STYLING */
+
+footer{
+    background-image: linear-gradient(to right, #EA1F29 , #F5D151);
+}
+
+.partners{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2em;
+    column-gap: 15em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.partners div{
+    height: 15vw;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+#anu{
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/ANU_Logo.png");
+}
+
+#dia{
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/DIA_Logo.png");
+
+}
+
+#gml{
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/GML_Logo.png");
+
+}
+
+#aia{
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/IAI_Logo.png");
+
+}
+
+#icomos{
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/ICOMOS_Logo.png");
+    
+}
+
+#mill{
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/Mill_Logo.png");
+}
+
+
+
+
+
+/* ABOUT PAGE STYILING */
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+  .material-symbols-sharp {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+  #aboutHeroContainer{
+    padding: 0;
+    background-color: transparent;
+}
+
+  .heroImg{
+    /* add and format hero image */
+
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#aboutHeroImg{
+    background-image: url(https://img1.wsimg.com/isteam/ip/713b0fb1-3749-4859-97e2-b7cf5cfb344b/Canberra%20Modernist%20Dinner%202019%20WEB-160.jpg/:/rs=w:1438,h:958);
+    grid-column-start:1;
+    grid-column-end: 4;
+    height: 60vh;
+}
+
+.heroText{
+    position: relative;
+    text-align: center;
+}
+
+#aboutHeroText{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    
+}
+
+.quote{
+    position: absolute;
+}
+
+.whoContainer{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.longQuote{
+    background-color: #111114;
+}
+
+.longQuote p{
+    color: #FFFFFC;
+}
+
+.whoImg{
+    position: relative;
+    
+    height: 25vh;
+    width: 25vh;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.whoText{
+    text-align: center;
+}
+
+
+#edwina{
+    background-image: url(https://australia.icomos.org/wp-content/uploads/Edwina-Jans.jpg);
+}
+
+#amy{
+    background-image: url(https://churchilltrust.my.salesforce-sites.com/api/services/apexrest/v1/image/?Id=0697F00000ldThvQAE);
+}
+
+#rachel{
+    background-image: url(https://www.gml.com.au/wp-content/uploads/2018/02/Rachel-2880-x-1600-option-4.jpg);
+}
+
+#shineDome{
+    background-image: url(https://www.science.org.au/curious/sites/default/files/article-banner-image/Patina-4000X1000-Banner.jpg);
+    height: 40vh;
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+#civicPool{
+    height: 40vh;
+    background-image: url(https://www.canberratimes.com.au/images/transform/v1/crop/frm/silverstone-ct-migration/acbb175c-f469-4c5c-987c-2d261b3d0d8f/r0_0_2000_1330_w2000_h1330_fmax.jpg);
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
