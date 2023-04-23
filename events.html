@@ -30,100 +30,46 @@
 			</div>
 		</header>
 		<main>
-			<!-- hero featuring an upcoming event -->
-			<div class="indexHeroContainer">
-				<div class="heroHeadingOne">
-					<h1>Growing Up</h1>
-				</div>
-				<img class="heroImg" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/the-benjamin-house.jpg" alt="The Benjamin House">
-				<!-- short description -->
-				<div class="heroText">
-					<a href="events.html">
-						<p>Join Roger Benjamin for a tour of his childhood home, Canberra’s Round House and a talk about its Czech architect, Alex Jelinek, who designed the house for his parents Bruce and Audrey Benjamin in 1956.<br><span class="material-symbols-sharp" id="arrow">south_east</span></p>
-					</a>
-				</div>
-				<div class="heroHeadingTwo">
-					<h1>Modern</h1>
-				</div>
-			</div>
-			<!-- carousel containing past events, contains borrowed code (Playlist Carousel - Css Only, n.d.) -->
-			<div class="container">
-				<h1 id="indexHeader">Past events</h1>
-				<div class="carousel">
-					<!-- identify which card was selected -->
-					<input type="radio" name="slider" id="item-1" checked>
-					<input type="radio" name="slider" id="item-2">
-					<input type="radio" name="slider" id="item-3">
-					<!-- event image cards -->
-					<div class="cards">
-						<label class="card" for="item-1" id="event-1">
-							<img src="https://content.api.news/v3/images/bin/e9239aacda36da44bb1821ad2dbca282" alt="Manning Clark House">
-						</label>
-						<label class="card" for="item-2" id="event-2">
-							<img src="https://www.canberratimes.com.au/images/transform/v1/crop/frm/9gmjQxX8MpSQh6J68NHMnY/c4737c4f-3d85-462b-a7b8-8a2626372f19.jpg/r0_0_2423_3372_w2423_h3372_fmax.jpg" alt="ANU tunnels">
-						</label>
-						<label class="card" for="item-3" id="event-3">
-							<img src="https://www.canberratimes.com.au/images/transform/v1/crop/frm/32suSVsqH3pdw6NJyh92X9D/a7ab67fb-47b0-4131-ab4e-28c772b7dea7.jpg/r0_9_2048_1165_w1200_h678_fmax.jpg" alt="song">
-						</label>
-					</div>
-					<!-- event title and information cards -->
-					<div class="player">
-						<div class="upper-part">
-							<!-- window for current selection -->
-							<div class="info-area" id="test">
-								<label class="song-info" id="song-info-1">
-									<div class="title">Manning Clark House Tours</div>
-									<div class="sub-line">
-										<div class="subtitle">April 2023</div>
-									</div>
-								</label>
-								<label class="song-info" id="song-info-2">
-									<div class="title">What Lies Beneath: The ANU Tunnels</div>
-									<div class="sub-line">
-										<div class="subtitle">November 2022</div>
-									</div>
-								</label>
-								<label class="song-info" id="song-info-3">
-									<div class="title"> Iconic Bus Shelters of Canberra</div>
-									<div class="sub-line">
-										<div class="subtitle">April 2019</div>
-									</div>
-								</label>
-							</div>
-						</div>
+			<!-- hero image related to event -->
+			<div class="eventHero"></div>
+			<!-- event information including a title, description, date, time, location and related tags -->
+			<div class="eventText">
+				<div>
+					<!-- event title -->
+					<h1 class="eventTitle">Growing up Modern</h1>
+					<h2 class="eventSubtitle">with Roger Benjamin</h2>
+					<!-- event tags -->
+					<div class="tags">
+						<p class="type">tour</p>
+						<p class="type">talk</p>
+						<p class="theme">architecture</p>
 					</div>
 				</div>
-			</div>
-			<div>
-				<h1 id="indexHeader">Our Partners</h1>
-				<!-- logos with external links that open in a new tab-->
-				<div class="indexPartners">
-					<a href="https://australia.icomos.org" target=”_blank”>
-						<img class="logos" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/icomos-colour.svg.png" alt="">
-					</a>
-					<a href="https://unihouse.anu.edu.au" target=”_blank”>
-						<img class="logos" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/anu-colour.png" alt="">
-					</a> 
-					<a href="https://www.themilldesign.com.au" target=”_blank”>
-						<img class="logos" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/mill-colour.png" alt="">
-					</a>
-					<a href="https://www.design.org.au" target=”_blank”>
-						<img class="logos" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/dia-colour.png" alt="">
-					</a>
-					<a href=https://www.architecture.com.au/act-chapter" target=”_blank”>
-						<img class="logos" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/iai-colour.png" alt="">
-					</a>
-					<a href="https://www.gml.com.au" target=”_blank”>
-						<img class="logos" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/gml-colour.png" alt="">
-					</a>
+				<div>
+					<!-- event details -->
+					<div>
+						<p class="location">Canberra's Round House <span class="material-symbols-outlined" id="info">location_on</span></p>
+					</div>
+					<div>
+						<p class="date">Thursday 13 April 2023 <span class="material-symbols-outlined" id="info">calendar_month</span></p>
+					</div>
+					<div>
+						<p class="duration">5.00pm - 7.00pm <span class="material-symbols-outlined" id="info">schedule</span></p>
+					</div>
 				</div>
-			</div>
-			<!-- image banner -->
-			<div class="timRossBanner">
-				<h1>Our Patron<br>Tim Ross</h1>
+				<div>
+					<!-- event descrition -->
+					<p>
+						Join Roger Benjamin for a tour of his childhood home, Canberra’s Round House and a talk about its Czech architect, Alex Jelinek, who designed the house for his parents Bruce and Audrey Benjamin in 1956.
+					</p>
+					<p>
+						Roger will draw from his recent book Growing Up Modern: Canberra’s Round House and Jelinek. 
+					</p>
+					<!-- book button linking to external page -->
+					<a class="book" href="https://www.eventbrite.com.au/e/growing-up-modern-at-canberras-round-house-with-roger-benjamin-tickets-591360092957?aff=ebdsoporgprofile" target=”_blank”><h1>Book<span class="material-symbols-sharp" id="arrow">south_east</span></h1></a>
+				</div>
 			</div>
 		</main>
-		
 		<footer>
 			<!-- logos with external links that open in a new tab-->
 			<div class="partners">

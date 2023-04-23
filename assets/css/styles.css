@@ -1,35 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
+    /* formatting */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* styling */
     color: #111114;
 }
 
-body{
-    font-family: 'Outfit', sans-serif;
-    background-color: #FFFFFC;
+body{/* formatting */
     width: 100vw;
     overflow-x: hidden;
+    /* styling */
+    font-family: 'Outfit', sans-serif;
+    background-color: #FFFFFC;
 }
 
 a{
+    /* styling */
     text-decoration: none;
     color: inherit;
 }
 
 li{
+    /* styling */ 
     list-style: none;
 }
 
+p{
+    /* formatting */
+    margin: 1em 0 1em 0;
+}
+
+h1{
+    /* styling */
+    text-transform: uppercase;
+    font-family: 'League Gothic', sans-serif;
+}
+
+h2{
+    /* styling */
+    font-family: 'League Gothic', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* NAVBAR STYLING */
+
 .navContainer{
-    /* positioning */
+    /* formatting */
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-    padding: 1em;
+    padding: 0.25em 0 0.25em 0;
     text-align: center;
     /* styling */
     color: #FFFFFC;
@@ -38,48 +63,23 @@ li{
 }
 
 .navLinks{
-    /* positioning */
+    /* formatting */
     position: relative;
     margin: 0 1em 0 1em;
     float: left;
     /* styling */
+    font-size: small;
     letter-spacing: 0.15em;
 }
 
-.Logo{
-    position: relative;
-    color: #EE444D;
-    font-size: 2.5em;
-}
-
-.navItem{
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 2em;
-    padding-right: 2em;
-    align-items: right;
-}
-
-/* .navLinks{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: 1em;
-    margin-right: 1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    font-weight: bold;
-    position: relative;
-    grid-column: 2/3;
-    text-align: right;
-    float: left;
-  } */
-  
+/* animate an underline stroke when link hovered, contains borrowed code (Animated Underline Hover, n.d.) */
 .navLinks:hover {
+    /* styling */
     color: #111114;
 }
 
 .navLinks::before {
+    /* formatting */
     content: "";
     position: absolute;
     display: block;
@@ -87,178 +87,476 @@ li{
     height: 2px;
     bottom: 0;
     left: 0;
+    /* styling */
     background-color: #111114;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-  }
-  
+}
+
 .navLinks:hover::before {
 transform: scaleX(1);
 }
 
-.heroContainer, .whyCanberra{
-     /* add and format hero image */
-     position: relative;
-     /* overflow: hidden; */
-     background-position-x: 50%;
-     background-position-y: 50%;
-     background-size: cover;
-     width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    padding-left: 5em;
-    padding-right: 5em;
-}
-
-
-.heroContainer .one{
+.Logo{
+    /* formatting */
     position: relative;
+    /* styling */
+    color: #EE444D;
+    font-size: 2.5em;
+}
+
+.indexHeroContainer{
+    /* formatting */
+    margin: 0 auto;
+    overflow-x: hidden;
+    position: relative;
+    max-width: 1000px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+/* HOME PAGE STYLING */
+
+.indexHeroContainer div{
+    /* formatting */
+    position: relative;
+}
+
+.indexHeroContainer h1{
+    /* formatting */
+    position: absolute;
+    bottom: 0;
+    font-size: 9em;
     text-align: center;
-    display: -moz-grid-line;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    bottom: 0;
 }
 
-h1{
-    position: absolute;
-    bottom: 0;
-    color: #111114;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-family: 'League Gothic', sans-serif;
-    width: 100%;
-}
-
-.heroContainer .two{
-    display:grid;
-    grid-column-start: 4;
-    grid-column-end: 6;
-    /* background-image: url(https://rosetta.slv.vic.gov.au/delivery/DeliveryManagerServlet?dps_func=stream&dps_pid=FL21843384); */
-    /* overflow: hidden; */
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-size: cover;
-    -webkit-filter: grayscale();
-}
-
-.two img{
-    display: inline;
-    width: 100%;
-    
-}
-
-.heroContainer .three{
-    position: absolute;
-    bottom: 0;
-    display:grid;
+.heroHeadingOne{
+    /* formatting */
     grid-column-start: 1;
     grid-column-end: 3;
-    /* background-color: rgba(255, 255, 255, 0.505); */
-    font-size: 1em;
-    height: 20vh;
-    font-weight: light;
 }
 
-.heroContainer .four{
+.heroImg{
+    /* formatting */
     position: relative;
-    text-align: center;
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 5;
     height: 30vh;
+    object-fit: cover;
 }
 
-#arrow{
-    position: absolute;
-bottom: 0px;
-right: 0px;
+.heroImg{
+    /* formatting */
+    width: 100%;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-/* .heroContainer h1{
-    position: absolute;
-    font-family: 'League Gothic', sans-serif;
-    font-size: 18vw;
-} */
+.heroText{
+    /* formatting */
+    grid-column: 3;
+    grid-row: 1;
+    height: 30vh;
+    position: relative;
+}
 
-.heroContainer .five{
-    background-image: url(https://rosetta.slv.vic.gov.au/delivery/DeliveryManagerServlet?dps_func=stream&dps_pid=FL21843396) ;
+.heroText p{
+    /* formatting */
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+#indexHeader{
+    /* formatting */
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+/* past event cards, contains borrowed code (Playlist Carousel - Css Only, n.d.) */
+input[type=radio] {
+    /* formatting */
+    display: none;
+}
+  
+.card {
+    /* formatting */
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    min-width: 300px;
+    /* styling */
+    transition: transform .4s ease;
+    cursor: pointer;
+}
+  
+.carousel {
+    /* formatting */
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
     display: grid;
+    justify-content: center;
+    grid-auto-flow: row;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    /* styling */
+    transform-style: preserve-3d;
+}
+  
+.cards {
+    /* formatting */
+    position: relative;
+    height: 50vh;
+    width: 60vw;
+    margin-bottom: 20px;
+}
+  
+.card img {
+    /* formatting */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+  
+#item-1:checked ~ .cards #event-3, #item-2:checked ~ .cards #event-1, #item-3:checked ~ .cards #event-2 {
+    transform: translatex(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+  
+#item-1:checked ~ .cards #event-2, #item-2:checked ~ .cards #event-3, #item-3:checked ~ .cards #event-1 {
+    transform: translatex(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+  
+#item-1:checked ~ .cards #event-1, #item-2:checked ~ .cards #event-2, #item-3:checked ~ .cards #event-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+  
+.player {
+    /* formatting */
+    border-radius: 8px;
+    min-width: 320px;
+    padding: 16px 10px;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 2em;
+    margin: 0 auto;
+    /* styling */
+    background-color: #FFFFFC;
+}
+  
+.upper-part {
+    /* formatting */
+    position: relative;
+    display: grid;
+    align-items: center;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+}
+  
+.song-info {
+    /* formatting */
+    width: calc(100% - 32px);
+    display: block;
+}
+  
+.song-info .title {
+    /* styling */
+    color: #403d40;
+    font-size: 14px;
+    line-height: 24px;
+}
+  
+.sub-line {
+    /* formatting */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+.subtitle{
+    /* styling */
+    font-size: 12px;
+    line-height: 16px;
+    color: #c6c5c6;
+}
+  
+.info-area {
+    /* formatting */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    /* styling */
+    transition: transform .4s ease-in;
+}
+  
+#item-2:checked ~ .player #test {
+    /* styling */
+    transform: translateY(0);
+}
+  
+#item-2:checked ~ .player #test  {
+    /* styling */
+    transform: translateY(-40px);
+}
+  
+#item-3:checked ~ .player #test  {
+    /* styling */
+    transform: translateY(-80px);
+}
+
+.indexPartners{
+    /* formatting */
+    align-items: center;
+    display: grid;
+    column-gap: 2em;
+    grid-auto-flow: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+.logos{
+    /* formatting */
+    width: 100%;
+}
+
+.timRossBanner{
+    /* formatting */
+    height: 50vh;
+    /* styling */
     background-position-x: 50%;
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/tim-ross.webp");
     background-position-y: 50%;
     background-size: cover;
-    width: 18vw;
-    height: auto;
-    grid-column-start: 5;
-    grid-column-end: 6;
-    -webkit-filter: grayscale();
+    background-repeat: no-repeat;
 }
 
-.five img{
-    
+.timRossBanner h1{
+    /* formatting */
+    text-align: right;
+    padding: 1em;
+    /* styling */
+    color: #FFFFFC;
 }
 
 
 /* FOOTER STYLING */
 
 footer{
+    /* formatting */
+    display: grid;
+    row-gap: 5em;
+    column-gap: 1em;
+    padding: 1em 0 1em 0;
+    width: 100vw;
+    overflow-x: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    position: relative;
+    /* styling */
     background-image: linear-gradient(to right, #EA1F29 , #F5D151);
 }
 
 .partners{
+    /* formatting */
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 2em;
-    column-gap: 15em;
-    padding-left: 2em;
-    padding-right: 2em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    column-gap: 1em;
+    row-gap: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 100vw;
+    min-width: 300px;
+    margin-left: 0 auto;
 }
 
 .partners div{
-    height: 15vw;
+    /* formatting */
+    height: 100px;
+    /* styling */
     background-position-x: 50%;
     background-position-y: 50%;
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0.5;
 }
 
 #anu{
-    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/ANU_Logo.png");
+    /* styling */
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/anu-logo.png");
 }
 
 #dia{
-    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/DIA_Logo.png");
+    /* styling */
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/dia-logo.png");
 
 }
 
 #gml{
-    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/GML_Logo.png");
+    /* styling */
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/gml-logo.png");
 
 }
 
 #aia{
-    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/IAI_Logo.png");
+    /* styling */
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/iai-logo.png");
 
 }
 
 #icomos{
-    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/ICOMOS_Logo.png");
+    /* styling */
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/icomos-logo.png");
     
 }
 
 #mill{
-    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/Mill_Logo.png");
+    /* styling */
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/mill-logo.png");
 }
 
+.newsletter{
+    /* formatting */
+    width: 40vw;
+    max-width: 100%;
+    width: 30vw;
+    align-items: center;
+    margin-left: 0 auto;
+}
 
+.newsletter h1, .newsletter p{
+    /* styling */
+    color: #FFFFFC;
+}
 
+.app-form-group {
+    /* formatting */
+    margin-bottom: 15px;
+    max-width: 100%;
+    min-width: 30vw;
+  }
+  
+  .app-form-group.message {
+    /* formatting */
+    margin-top: 40px;
+  }
 
+  .app-form-control {
+    /* formatting */
+    width: 100%;
+    /* styling */
+    background: none;
+    border: none;
+    border-bottom: 1px solid #FFFFFC;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    /* styling */
+    color: #FFFFFC;
+  }
+  
+  .app-form-control:focus {
+    /* styling */
+    border-bottom-color: #6F86C1;
+  }
+
+input[type=submit]{
+    /* formatting */
+    text-align: ends;
+    margin-left: 0 auto;
+    /* styling */
+    background-color: transparent;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 0;
+    color: #6F86C1;
+}
+
+.socialsLink{
+    /* formatting */
+    height: 20px;
+    /* styling */
+    opacity: 50%;
+}
+
+.socials{
+    /* formatting */
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* styling */
+    border-bottom: 1px solid #FFFFFC;
+    border-top: 1px solid #FFFFFC;
+}
+
+.footerText{
+    /* formatting */
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.footerText p{
+    /* styling */
+    color: #FFFFFC;
+}
+
+.footerLinks{
+    /* styling */
+    text-transform: uppercase;
+}
+
+.footerLinks h1{
+    /* styling */
+    color: #FFFFFC;
+}
+
+.footerLinks li{
+    /* styling */
+    font-size: small;
+    letter-spacing: 0.15em;
+    color: #FFFFFC;
+}
+
+.footerLinks ul{
+    /* formatting */
+    margin: 1em 0 1em 0;
+}
 
 /* ABOUT PAGE STYILING */
 
 .material-symbols-outlined {
+    /* styling */
     font-variation-settings:
     'FILL' 1,
     'wght' 500,
@@ -267,6 +565,7 @@ footer{
   }
 
   .material-symbols-sharp {
+    /* styling */
     font-variation-settings:
     'FILL' 1,
     'wght' 500,
@@ -275,96 +574,261 @@ footer{
   }
 
   #aboutHeroContainer{
+    /* formatting */
+    margin: 0;
     padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100vw;
+    /* styling */
     background-color: transparent;
 }
 
-  .heroImg{
-    /* add and format hero image */
-
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
-
 #aboutHeroImg{
-    background-image: url(https://img1.wsimg.com/isteam/ip/713b0fb1-3749-4859-97e2-b7cf5cfb344b/Canberra%20Modernist%20Dinner%202019%20WEB-160.jpg/:/rs=w:1438,h:958);
-    grid-column-start:1;
-    grid-column-end: 4;
-    height: 60vh;
-}
-
-.heroText{
+    /* formatting */
     position: relative;
-    text-align: center;
-}
-
-#aboutHeroText{
-    grid-column-start: 4;
-    grid-column-end: 6;
-    
+    width: 60vw;
+    min-width: 320px;
+    max-width: 100vw;
 }
 
 .quote{
-    position: absolute;
+    /* formatting */
+    position: relative;
+    text-align: center;
+    min-width: min-content;
+    max-width: 100vw;
 }
 
 .whoContainer{
+    /* formatting */
+    position: relative;
+    display: grid;
+    grid-auto-flow: row;
+    min-width: 320px;
+    overflow: hidden;
+}
+
+@media (orientation: portrait) {
+    #aboutHeroContainer{
+        /* formatting */
+        grid-auto-flow: row;
+    }
+
+    #aboutHeroImg{
+        /* formatting */
+        width: 100vw;
+    }
+}
+
+.subheading{
+    /* formatting */
+    text-align: left;
+}
+
+.whoItem{
+    /* formatting */
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.longQuote{
-    background-color: #111114;
-}
-
-.longQuote p{
-    color: #FFFFFC;
+    column-gap: 1em;
+    position: relative;
+    padding: 1em;
 }
 
 .whoImg{
+    /* formatting */
     position: relative;
-    
-    height: 25vh;
-    width: 25vh;
+    height: 20vh;
+    width: 20vh;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    /* styling */
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
-    margin: 0 auto;
 }
 
 .whoText{
-    text-align: center;
+    /* formatting */
+    text-align: left;
 }
 
 
 #edwina{
+    /* styling */
     background-image: url(https://australia.icomos.org/wp-content/uploads/Edwina-Jans.jpg);
 }
 
 #amy{
+    /* styling */
     background-image: url(https://churchilltrust.my.salesforce-sites.com/api/services/apexrest/v1/image/?Id=0697F00000ldThvQAE);
 }
 
 #rachel{
+    /* styling */
     background-image: url(https://www.gml.com.au/wp-content/uploads/2018/02/Rachel-2880-x-1600-option-4.jpg);
 }
 
-#shineDome{
-    background-image: url(https://www.science.org.au/curious/sites/default/files/article-banner-image/Patina-4000X1000-Banner.jpg);
-    height: 40vh;
-    grid-column-start: 3;
-    grid-column-end: 6;
+.whyCanberra, .enquiries, .whoHolder{
+    /* formatting */
+    max-width: 1000px;
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2em 1em 2em 1em;
+    grid-auto-flow: row;
+    margin: 0 auto;
+    column-gap: 1em;
 }
 
-#civicPool{
-    height: 40vh;
-    background-image: url(https://www.canberratimes.com.au/images/transform/v1/crop/frm/silverstone-ct-migration/acbb175c-f469-4c5c-987c-2d261b3d0d8f/r0_0_2000_1330_w2000_h1330_fmax.jpg);
-    grid-column-start: 1;
-    grid-column-end: 4;
+form{
+    /* formatting */
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+    width: 100%;
+    row-gap: 1em;
+}
+
+#message{
+    /* formatting */
+    height: 300%;
+}
+
+.container{
+    /* formatting */
+    padding-bottom: 2em;
+    /* styling */
+    background-color: #111114;
+}
+
+.container h1{
+    /* styling */
+    color: #FFFFFC;
+}
+
+.whyCanberra p, .enquiries h1{
+    /* styling */
+    color: #FFFFFC;
+}
+
+.shineDome{
+    /* formatting */
+    width: 100vw;
+}
+
+/* EVENT PAGE STYLING */
+
+#events{
+    /* formatting */
+    position: relative;
+}
+
+.eventHero{
+    /* formatting */
+    width: 100vw;
+    position: relative;
+    border-radius: 0 0 30px 30px;
+    height: 80vh;
+    /* styling */
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/the-benjamin-house-2.jpg");
+    -webkit-filter: grayscale();
+}
+
+.eventText{
+    /* formatting */
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em 0 1em 0;
+}
+
+.location, .date, .duration{
+    /* formatting */
+    text-align: right;
+    /* styling */
+    text-transform: uppercase;
+    color: #6F86C1;
+}
+
+.tags{
+    /* formatting */
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+    column-gap: 1em;
+    /* styling */
+    font-size: 0.5em;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    text-transform: uppercase;
+}
+
+.type {
+    /* formatting */
+    padding: none;
+    /* styling */
+    color: #EA1F29;
+    border: 1px solid #EA1F29;
+    border-radius: 50px;
+}
+
+.theme{
+    /* formatting */
+    padding: none;
+    /* styling */
+    color: #F5D151;
+    border: 1px solid #F5D151;
+    border-radius: 50px;
+}
+
+.type:hover{
+    /* styling */
+    background-color: #EA1F29;
+    color: #FFFFFC;
+}
+
+.theme:hover{
+    /* styling */
+    background-color: #F5D151;
+    color: #FFFFFC;
+}
+
+#info {
+    /* styling */
+    color: #6F86C1;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.book{
+    /* formatting */
+    width: min-content;
+    display: inline;
+    align-items: baseline;
+}
+
+.book h1{
+    /* formatting */
+    width: max-content;
 }

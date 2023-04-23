@@ -1,142 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<title>Canberra Modern</title>
-	<meta charset="utf-8" />
-
-
-	<link rel="stylesheet" href="assets/css/styles.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-
-
-    <!-- link jost font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-	<header>
-		<div class="navContainer">
-			<div class="navItem">
+	<head>
+		<title>Canberra Modern</title>
+			<!-- set viewport width to math the device and zoom to 1x -->
+			<meta name="viewport" content="width=device-width, inital-scale=1.0" />
+			<meta charset="utf-8" />
+			<link rel="stylesheet" href="assets/css/styles.css" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+			<!-- link google fonts and icons -->
+			<link rel="preconnect" href="https://fonts.googleapis.com"> 
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+			<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	</head>
+	<body>
+		<header>
+			<!-- navigation panel -->
+			<div class="navContainer">
 				<h1 class="Logo"><a href="index.html">CM</a></h1>
-			</div>
-			<div class="navItem">
-				<ul >
+				<ul>
 					<li><a class="navLinks" href="about.html">About</a></li>
-					<li><a class="navLinks" href="about.html">Events</a></li>
+					<li><a class="navLinks" href="events.html">Events</a></li>
+					<!-- placeholder link -->
+					<li><a class="navLinks" href="about.html">Our Picks</a></li>
 				</ul>
 			</div>
-		</div>
-	</header>
-
-	<main>
-		<div class="heroContainer" id="aboutHeroContainer">
-			<div class="heroImg" id="aboutHeroImg">
-
+		</header>
+		<main>
+			<!-- hero image with slogan -->
+			<div class="heroContainer" id="aboutHeroContainer">
+				<img id="aboutHeroImg" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/edwina-laughing.jpeg" alt="">
+				<h1 class="quote"><span class="material-symbols-outlined"> format_quote</span> <br>	Conservation through participation</h1>
 			</div>
-			<div class="heroText" id="aboutHeroText">
-				<span class="material-symbols-outlined">
-					format_quote
-					</span>
-					
-				<h1 class="quote">Conservation through participation.</h1>
-			</div>
-		</div>
-
-		<div class="longQuote">
-			 <p>
-				Canberra is a young city with a rich architectural legacy. With major boom periods in the 1920s and again from the 1950s-1980s – the architectural aesthetic of the city is eclectic, but deliberately cohesive.  
-			 </p>
-		</div>
-		<div class="whoContainer">
-			<div class="whoItem" >
-				<div class="whoImg" id="edwina">
-
-				</div>
-				<div class="whoText">
-					<h2>Edwina Jans</h2>
-					<p> is an archaeologist, museums and cultural heritage expert who works with the ACT Government. Edwina specialises in education, communication and innovative engagement for heritage places.</p>
-				</div>
-			</div>
-			<div class="whoItem" >
-				<div class="whoImg" id="amy">
-				</div>
-				<div class="whoText">
-					<h2>Amy Jarvis</h2>
-					<p>is a heritage management and interpretation specialist who works at ACT Historic Places. Amy was awarded a Churchill Fellowship in 2018/9 to investigate advocacy and engagement models around mid-century architecture in the USA. </p>
+			<!-- founders information containing their name, photo and description -->
+			<div class="whoHolder">
+				<h1 class="subheading" >Who<br>are we?</h1>
+				<div class="whoContainer">
+					<div class="whoItem" >
+						<div class="whoImg" id="edwina"></div>
+						<div class="whoText">
+							<h2>Edwina Jans</h2>
+							<p> is an archaeologist, museums and cultural heritage expert who works with the ACT Government. Edwina specialises in education, communication and innovative engagement for heritage places.</p>
+						</div>
+					</div>
+					<div class="whoItem" >
+						<div class="whoImg" id="amy"></div>
+						<div class="whoText">
+							<h2>Amy Jarvis</h2>
+							<p>is a heritage management and interpretation specialist who works at ACT Historic Places. Amy was awarded a Churchill Fellowship in 2018/9 to investigate advocacy and engagement models around mid-century architecture in the USA. </p>
+						</div>
+					</div>
+					<div class="whoItem" >
+						<div class="whoImg" id="rachel"></div>
+						<div class="whoText">
+							<h2>Rachel Jackson</h2>
+							<p>is an interior designer and heritage management expert who is Principal at GML Heritage. Rachel is a specialist in cultural landscape assessment and in heritage and sustainability. Rachel is a 2022/23 Getty Conservation Institute Scholar.  </p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="whoItem" >
-				<div class="whoImg" id="rachel">
-
+			<div class="container">
+				<!-- shine dome image banner -->
+				<img class="shineDome" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/sine-dome.jpg" alt="">
+				<!-- description about canberra's history -->
+				<div class="whyCanberra">
+					<h1 class="subheading" >What<br> is so special about canberra?</h1>
+					<div>
+						<p> Canberra is a young city with a rich architectural legacy.</p>
+						<p>With major boom periods in the 1920s and again from the 1950s-1980s – the architectural aesthetic of the city is eclectic, but deliberately cohesive.</p>
+						<p>The mid-late twentieth century period of development in Canberra, specifically during the National Capital Development Commission’s (NCDC) oversight (1958-1989) has not been widely celebrated or recognised by the Canberra community.</p>
+					</div>
 				</div>
-				<div class="whoText">
-					<h2>Rachel Jackson</h2>
-					<p>is an interior designer and heritage management expert who is Principal at GML Heritage. Rachel is a specialist in cultural landscape assessment and in heritage and sustainability. Rachel is a 2022/23 Getty Conservation Institute Scholar.  </p>
+				<!-- enquiries form that takes name, email and message input from user, contains borrowed code (Contact Us - UI Challenge, n.d.)-->
+				<div class="enquiries" >
+					<h1 class="subheading">Have<br>A question?</h1>
+					<form action="/action_page.php">
+						<input class="app-form-control" placeholder="FULL NAME" autocomplete="on" autofill="on">
+						<input class="app-form-control" placeholder="EMAIL" autocomplete="on" autofill="on">
+						<textarea class="app-form-control"  name="message" rows="4" placeholder="MESSAGE" autofill="off"></textarea>
+						<input class="submitButton" type="submit">
+					</form>
 				</div>
 			</div>
-		</div>
-
-		<div class="whyCanberra" id="aboutHeroContainer">
-			<div class="heroImg" id="shineDome">
-
+		</main>
+		<footer>
+			<!-- logos with external links that open in a new tab-->
+			<div class="partners">
+				<a href="https://australia.icomos.org" target=”_blank”>
+					<div id="icomos" ></div>
+				</a>
+				<a href="https://unihouse.anu.edu.au" target=”_blank”>
+					<div id="anu"></div>
+				</a> 
+				<a href="https://www.themilldesign.com.au" target=”_blank”>
+					<div id="mill"></div>
+				</a>
+				<a href="https://www.design.org.au" target=”_blank”>
+					<div id="dia"></div>
+				</a>
+				<a href=https://www.architecture.com.au/act-chapter" target=”_blank”>
+					<div id="aia"></div>
+				</a>
+				<a href="https://www.gml.com.au" target=”_blank”>
+					<div id="gml"></div>
+				</a>
 			</div>
-			<div class="heroText">
-					
-				<p> Canberra is a young city with a rich architectural legacy. With major boom periods in the 1920s and again from the 1950s-1980s – the architectural aesthetic of the city is eclectic, but deliberately cohesive.  </p>
+			<div class="footerLinks">
+				<!-- list of pages within the website -->
+				<h1 class="footerLinksHeader">Navigate</h1>
+				<ul>
+					<a href="index.html"><li> Home</li></a>
+					<a href="about.html"><li> About</li></a>
+					<a href="events.html"><li> Events</li></a>
+					<a href="index.html"><li> Our Picks</li></a>
+				</ul>
 			</div>
-		</div>
-		<div class="whyCanberra" id="aboutHeroContainer">
-			<div class="heroImg" id="civicPool">
-
+			<div class="footerLinks">
+				<!-- list of external links to social media pages -->
+				<h1 class="footerLinksHeader">Contact</h1>
+				<ul>
+					<li>canberramodern@gmail.com</li>
+					<a href="https://www.facebook.com/canberramodern/" target="_blank"><li>Facebook</li></a>
+					<a href="https://www.instagram.com/canberra_modern/" target="_blank"><li>Instagram</li></a>
+				</ul>
 			</div>
-			<div class="heroText">
-					
-				<p>The mid-late twentieth century period of development in Canberra, specifically during the National Capital Development Commission’s (NCDC) oversight (1958-1989) has not been widely celebrated or recognised by the Canberra community.</p>
+			<!-- newsletter signup form that takes email input from user, contains borrowed code (Contact Us - UI Challenge, n.d.) -->
+			<div class="newsletter">
+				<h1>Dont miss out!</h1>
+				<p class="subscribe">Subscribe to our newsletter and be the first to know about upcoming work and events</p>
+				<form action="/action_page.php">
+					<input class="app-form-control" placeholder="EMAIL" autocomplete="on" autofill="on">
+					<input class="submitButton" type="submit">
+				</form>
 			</div>
-		</div>
-
-	</main>
-
-	<footer>
-		<div class="partners">
-			<a href="https://australia.icomos.org" target=”_blank”>
-				<div id="icomos" >
-
-				</div>
-			</a>
-			<a href="https://unihouse.anu.edu.au" target=”_blank”>
-				<div id="anu">
-				
-				</div>
-			</a>
-
-			<a href="https://www.themilldesign.com.au" target=”_blank”>
-				<div id="mill">
-
-				</div>
-			</a>
-			<a href="https://www.design.org.au" target=”_blank”>
-				<div id="dia">
-
-				</div>
-			</a>
-			<a href=https://www.architecture.com.au/act-chapter" target=”_blank”>
-				<div id="aia">
-
-				</div>
-			</a>
-			<a href="https://www.gml.com.au" target=”_blank”>
-				<div id="gml">
-
-				</div>
-			</a>
-		</div>
-	</footer>
-
-</body>
+			<!-- icons containing external links to social media pages -->
+			<div class="socials">
+				<img class="socialsLink" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/facebook-logo.png" alt="facebook logo">
+				<img class="socialsLink" src="/Users/ezrareadhead/Documents/GitHub/11056-project-1 copy 2/assets/images/instagram-logo.png" alt="instagram-logo">
+			</div>
+			<!-- copyright information -->
+			<div class="footerText">
+				<p >Copyright © 2017<br>Canberra Modern Incorporated<br>All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
 </html>
